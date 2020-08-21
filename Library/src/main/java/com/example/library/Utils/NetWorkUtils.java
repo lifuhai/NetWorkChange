@@ -42,11 +42,7 @@ public class NetWorkUtils {
         }
         int nType = networkInfo.getType();
         if(nType == ConnectivityManager.TYPE_MOBILE){
-            if(networkInfo.getExtraInfo().toLowerCase().equalsIgnoreCase("cmnet")){
-                return NetType.CMENT;
-            }else {
                 return NetType.CMWAP;
-            }
         }else if(nType == ConnectivityManager.TYPE_WIFI){
             return NetType.WIFI;
         }
